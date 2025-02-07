@@ -1,10 +1,11 @@
-import { Viewer } from "./lib/container";
+import { Editor, Viewer } from "./lib/container";
 
 const App = () => {
   return (
-    <div>
+    <main className="layout">
+      <Editor />
       <Viewer />
-    </div>
+    </main>
   );
 };
 

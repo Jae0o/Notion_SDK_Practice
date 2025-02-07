@@ -1,5 +1,7 @@
+import { ContentLayout } from "../../components";
+
 const Viewer = () => {
-  return <div>Viewer</div>;
+  return <ContentLayout>Viewer</ContentLayout>;
 };
 
 export default Viewer;
