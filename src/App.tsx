@@ -1,11 +1,12 @@
 import { Editor, Viewer } from "./lib/container";
+import * as S from "./App.styles";
 
 const App = () => {
   return (
-    <main className="layout">
+    <S.Layout>
       <Editor />
       <Viewer />
-    </main>
+    </S.Layout>
   );
 };
 

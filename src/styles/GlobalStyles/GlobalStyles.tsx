@@ -25,18 +25,6 @@ const GlobalStyles = createGlobalStyle`
     width: 100%;
     height: 100%;
   }
-
-
-  .layout{
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
-    background: ${({ theme }) => theme.colors.main};
-  }
 `;
 
 export default GlobalStyles;
