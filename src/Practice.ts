@@ -52,7 +52,7 @@ export const createNotionPage = async (param: FormValues) => {
   // });
 
   try {
-    const response = await Notion.page.create({
+    const response = await Notion.pages.create({
       parent: {
         database_id: VITE_NOTION_PAGE_ID,
         type: "database_id",
