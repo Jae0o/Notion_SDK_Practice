@@ -1,14 +1,21 @@
-import { PROPERTIES } from "../../../Practice";
+import { SubmitHandler } from "react-hook-form";
+import { createNotionPage, PROPERTIES } from "../../../Practice";
 import { ContentLayout } from "../../components";
 
 import * as S from "./Editor.styles";
 import { useEditForm } from "./hooks";
+import { FormValues } from "./hooks/useEditForm/useEditForm";
 
 const Editor = () => {
   const { handleSubmit, register, errors } = useEditForm();
+
+  const onSubmit: SubmitHandler<FormValues> = data => {
+    createNotionPage(data);
+  };
+
   return (
     <ContentLayout>
-      <S.EditorLayout onSubmit={handleSubmit((data) => console.log(data))}>
+      <S.EditorLayout onSubmit={handleSubmit(onSubmit)}>
         {PROPERTIES.map(({ name, type }) => (
           <S.EditorInputContainer key={name}>
             <S.EditorInputTitleBox>
